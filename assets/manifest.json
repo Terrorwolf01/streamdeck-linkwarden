@@ -1,0 +1,51 @@
+{
+  "Name": "Linkwarden",
+  "Author": "Terrorwolf",
+  "Version": "0.0.1.0",
+  "Description": "Test",
+  "Category": "Linkwarden",
+  "CategoryIcon": "icon/linkwarden",
+  "UUID": "at.terrorwolf.linkwarden",
+  "SDKVersion": 2,
+  "Software": {
+    "MinimumVersion": "6.4"
+  },
+  "Icon": "icon/linkwarden",
+  "OS": [
+    {
+      "Platform": "windows",
+      "MinimumVersion": "10"
+    },
+    {
+      "Platform": "linux"
+    }
+  ],
+  "CodePaths": {
+    "x86_64-unknown-linux-gnu": "linkwarden-x86_64-unknown-linux-gnu",
+    "x86_64-pc-windows-gnu": "linkwarden-x86_64-pc-windows-gnu"
+  },
+  "CodePath": "linkwarden-x86_64-pc-windows-gnu",
+  "CodePathLin": "linkwarden-x86_64-unknown-linux-gnu",
+  "CodePathWin": "linkwarden-x86_64-pc-windows-gnu",
+  "CodePathMac": "linkwarden-x86_64-pc-windows-gnu",
+  "PropertyInspectorPath": "pi/simple.html",
+  "Actions": [
+    {
+      "UUID": "at.terrorwolf.linkwarden.addlink",
+      "Name": "Add Link",
+      "Icon": "icon/linkwarden",
+      "Tooltip": "Add Link thats currently in the Clipboard",
+      "Controllers": [
+        "Keypad"
+      ],
+      "States": [
+        {
+          "Title": "Add Link",
+          "FontSize": 16,
+          "TitleAlignment": "bottom",
+          "Image": "icon/linkwarden"
+        }
+      ]
+    }
+  ]
+}

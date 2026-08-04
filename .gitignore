@@ -1,0 +1,4 @@
+/target/
+*.streamDeckPlugin
+/.idea/
+/assets/pi/
