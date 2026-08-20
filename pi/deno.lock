@@ -1,7 +1,7 @@
 {
   "version": "5",
   "specifiers": {
-    "npm:@openaction/svelte-pi@1": "1.0.0_svelte@5.46.1__acorn@8.15.0",
+    "npm:@openaction/svelte-pi@^1.1.1": "1.1.1_svelte@5.46.1__acorn@8.15.0",
     "npm:@sveltejs/adapter-static@3": "3.0.10_@sveltejs+kit@2.49.2__@sveltejs+vite-plugin-svelte@6.2.1___svelte@5.46.1____acorn@8.15.0___vite@7.3.0____picomatch@4.0.3__svelte@5.46.1___acorn@8.15.0__vite@7.3.0___picomatch@4.0.3__acorn@8.15.0_@sveltejs+vite-plugin-svelte@6.2.1__svelte@5.46.1___acorn@8.15.0__vite@7.3.0___picomatch@4.0.3_svelte@5.46.1__acorn@8.15.0_vite@7.3.0__picomatch@4.0.3",
     "npm:@sveltejs/kit@^2.49.0": "2.49.2_@sveltejs+vite-plugin-svelte@6.2.1__svelte@5.46.1___acorn@8.15.0__vite@7.3.0___picomatch@4.0.3_svelte@5.46.1__acorn@8.15.0_vite@7.3.0__picomatch@4.0.3_acorn@8.15.0",
     "npm:@sveltejs/vite-plugin-svelte@^6.2.0": "6.2.1_svelte@5.46.1__acorn@8.15.0_vite@7.3.0__picomatch@4.0.3",
@@ -173,8 +173,8 @@
         "@jridgewell/sourcemap-codec"
       ]
     },
-    "@openaction/svelte-pi@1.0.0_svelte@5.46.1__acorn@8.15.0": {
-      "integrity": "sha512-8sjDnC3iPf4oqxCtngH3nXbfJYYa5gkPfDU9q0MSDr8ZWNaixBq3yLiL4X01Un9UjzBPFxbG63Vg4zw04QbklA==",
+    "@openaction/svelte-pi@1.1.1_svelte@5.46.1__acorn@8.15.0": {
+      "integrity": "sha512-lQ2YZRSz0WfdhBfBsZf6+XfPmgj8zGFdHeqIVEcn7IbCf11hg7YwxsfcTTwbknoGeXA+c7G2KI9G+hPXr/UdBg==",
       "dependencies": [
         "svelte"
       ]
@@ -839,7 +839,7 @@
   "workspace": {
     "packageJson": {
       "dependencies": [
-        "npm:@openaction/svelte-pi@1",
+        "npm:@openaction/svelte-pi@^1.1.1",
         "npm:@sveltejs/adapter-static@3",
         "npm:@sveltejs/kit@^2.49.0",
         "npm:@sveltejs/vite-plugin-svelte@^6.2.0",

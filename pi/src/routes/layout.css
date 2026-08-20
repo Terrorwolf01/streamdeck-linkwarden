@@ -3,3 +3,19 @@
 body {
 	@apply bg-neutral-900 p-3;
 }
+
+select {
+	@apply appearance-none;
+	@apply cursor-pointer;
+}
+
+.select-wrapper {
+	@apply relative;
+}
+
+.select-wrapper::after {
+	@apply absolute top-1/2 right-3 -translate-y-1/2;
+	@apply h-1.5 w-1.5 rotate-45;
+	@apply border-r-2 border-b-2 border-neutral-400;
+	@apply pointer-events-none content-["_"];
+}

@@ -2,7 +2,7 @@
   "Name": "Linkwarden",
   "Author": "Terrorwolf",
   "Version": "0.0.1.0",
-  "Description": "Test",
+  "Description": "Add links to Linkwarden and open your instance, right from your Stream Deck.",
   "Category": "Linkwarden",
   "CategoryIcon": "icon/linkwarden",
   "UUID": "at.terrorwolf.linkwarden",
@@ -41,6 +41,24 @@
       "States": [
         {
           "Title": "Add Link",
+          "FontSize": 16,
+          "TitleAlignment": "bottom",
+          "Image": "icon/linkwarden"
+        }
+      ]
+    },
+    {
+      "UUID": "at.terrorwolf.linkwarden.openlinkwarden",
+      "Name": "Open Linkwarden",
+      "Icon": "icon/linkwarden",
+      "Tooltip": "Open Linkwarden in your browser",
+      "PropertyInspectorPath": "pi/openlinkwarden.html",
+      "Controllers": [
+        "Keypad"
+      ],
+      "States": [
+        {
+          "Title": "Open Linkwarden",
           "FontSize": 16,
           "TitleAlignment": "bottom",
           "Image": "icon/linkwarden"

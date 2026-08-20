@@ -2,3 +2,4 @@
 *.streamDeckPlugin
 /.idea/
 /assets/pi/
+/.mcp.json
