@@ -1,7 +1,7 @@
 {
   "Name": "Linkwarden",
   "Author": "Terrorwolf",
-  "Version": "0.0.1.0",
+  "Version": "1.0.0.0",
   "Description": "Add links to Linkwarden and open your instance, right from your Stream Deck.",
   "Category": "Linkwarden",
   "CategoryIcon": "icon/linkwarden",
