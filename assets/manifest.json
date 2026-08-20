@@ -1,14 +1,14 @@
 {
   "Name": "Linkwarden",
   "Author": "Terrorwolf",
-  "Version": "1.0.1.0",
+  "Version": "1.0.2.0",
   "Description": "Add links to Linkwarden and open your instance, right from your Stream Deck.",
   "Category": "Linkwarden",
   "CategoryIcon": "icon/linkwarden",
   "UUID": "at.terrorwolf.linkwarden",
-  "SDKVersion": 2,
+  "SDKVersion": 3,
   "Software": {
-    "MinimumVersion": "6.4"
+    "MinimumVersion": "6.9"
   },
   "Icon": "icon/linkwarden",
   "OS": [
