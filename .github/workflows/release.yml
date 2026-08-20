@@ -1,8 +1,9 @@
 name: Release
 
-# Fires on a version tag, e.g. `v0.1.0` or `v0.1.0.0` (matching assets/manifest.json's 4-part
-# Windows-style version field). The tag's version (minus the leading "v") must match manifest.json's
-# "Version" - bump that alongside the tag, or this fails before building anything.
+# Fires on a version tag, e.g. `v1.0.0`. assets/manifest.json's "Version" is 4-part
+# (Windows-style, e.g. "1.0.0.0") - only its first three components need to match the tag, since
+# that 4th number doesn't carry meaning for a release tag. Bump the manifest's Version alongside
+# the tag, or this fails before building anything.
 on:
   push:
     tags:
@@ -16,14 +17,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Check tag matches manifest version
         run: |
           tag_version="${GITHUB_REF_NAME#v}"
-          manifest_version=$(jq -r '.Version' assets/manifest.json)
+          # Compare against only the first three components of manifest.json's 4-part Version -
+          # the tag doesn't carry that trailing number.
+          manifest_version=$(jq -r '.Version' assets/manifest.json | cut -d. -f1-3)
           if [ "$tag_version" != "$manifest_version" ]; then
-            echo "::error::Tag $GITHUB_REF_NAME (version $tag_version) doesn't match assets/manifest.json's Version ($manifest_version)."
+            echo "::error::Tag $GITHUB_REF_NAME (version $tag_version) doesn't match assets/manifest.json's Version ($manifest_version.x)."
             exit 1
           fi
 
@@ -53,6 +56,10 @@ jobs:
         uses: denoland/setup-deno@v2
         with:
           deno-version: v2.x
+
+      - name: Install PI dependencies
+        working-directory: pi
+        run: deno install
 
       - name: Package plugin
         run: ./package.sh
